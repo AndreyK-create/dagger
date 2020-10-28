@@ -19,5 +19,8 @@ package(default_visibility = ["//:src"])
 
 filegroup(
     name = "srcs_filegroup",
-    srcs = glob(["**/*"]),
+    srcs = glob(
+        ["**/*"],
+        exclude = ["**/build/**"],
+    ),
 )
